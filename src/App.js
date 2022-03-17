@@ -80,10 +80,7 @@ function App() {
   const [imag, setImage] = useState([])
 
   const changeImage = (i, pos) =>{
-    console.log(i + " " + pos)
-    console.log(imag)
     const newImag = imag;
-    console.log(newImag)
     newImag[i]=pos
     setImage([...newImag]);
   }
@@ -105,8 +102,7 @@ function App() {
               return(
                 <li>
                   <div className="product">
-                    <h2>{product.name}</h2>
-                    {console.log("lflf" + imag[index])}
+                    <h3>{product.name}</h3>
                     <img src={imag[index]?product.images[imag[index]]:product.images[0]} alt="" />
                     <div className="buttons">
                       {product.images.map((_,i)=>{
